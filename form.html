@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+       .container {
+        width: 800px;
+            margin: -20px auto 0px auto;
+            padding: 10px; 
+
+            box-shadow: 0px 0px 10px black;
+            background-color: rgb(244, 245, 244);
+    
+       }
+        
+        * {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+    
+
+body {
+    padding: 70px; 
+    margin:50px;
+    background:rgba(0, 128, 0, 0.692);
+
+}
+
+body, input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    
+}
+
+.grupo:before, .grupo:after {
+    content: " ";
+    display: table;
+}
+
+.grupo:after {
+    clear: both;
+}
+
+.campo {
+    margin-bottom: 1em;
+}
+
+.campo label {
+    margin-bottom: 0.2em;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+fieldset.grupo .campo {
+    float:  left;
+    margin-right: 1em;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="url"],
+.campo input[type="tel"],
+.campo select,
+.campo textarea {
+    padding: 0.2em;
+    border: 1px solid rgb(19, 15, 15);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+}
+
+.campo select option {
+    padding-right: 1em;
+}
+.container .sla{
+    background: #69a751;
+    color:white;
+    border-style: outset;
+    border-color: #2ea200;
+    border-radius:5px;
+    height:50px;
+    width:150px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    font: bold 14px arial, sans-serif;
+    text-shadow:none;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #FFC;
+}
+
+.campo label.checkbox {
+    color: #000;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.botao {
+    font-size: 1.5em;
+    background: rgb(20, 161, 55);
+    border-radius:9px;
+    margin-bottom: 1em;
+    color: #FFF;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.botao:hover {
+    background: rgb(102, 255, 0);
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+.botao, select, label.checkbox {
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+    <form action="#" method="post">
+        <fieldset>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" style="width: 10em" value="">
+                </div>
+                <div class="campo">
+                    <label for="snome">Sobrenome</label>
+                    <input type="text" id="snome" name="snome" style="width: 10em" value="">
+                </div>
+            </fieldset>
+            <div class="campo">
+                <label>Sexo</label>
+                <label>
+                    <input type="radio" name="sexo" value="masculino"> Masculino
+                </label>
+                <label>
+                    <input type="radio" name="sexo" value="feminino"> Feminino
+                </label>
+            </div>
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" style="width: 20em" value="">
+            </div>
+            <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone" style="width: 10em" value="">
+            </div>
+    
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" style="width: 10em" value="">
+                </div>
+                <div class="campo">
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado">
+                        <option value="">--</option>
+                        <option value="DF">distrito federal</option>
+                        <option value="SP">são paulo</option>
+                        <option value="RJ">rio de janeiro</option>
+                        <option value="GO">goiás</option>
+                        <option value="AM">amazonas</option>
+                        <option value="SC">santa catarina</option>
+                    </select>
+                </div>
+            </fieldset>
+    
+            <div class="campo">
+                <label for="mensagem">Mensagem</label>
+                <textarea rows="6" style="width: 20em" id="mensagem" name="mensagem"></textarea>
+            </div>
+    
+            <div class="campo">
+                <label>Newsletter</label>
+                <label>
+                    <input type="checkbox" name="newsletter" value="1"> Gostaria de receber a Newsletter da empresa
+                </label>
+            </div>
+    
+            <input class="sla" type="submit" name="" value="CADASTRAR">
+        </fieldset>
+    </div>
+</body>
+</html>
